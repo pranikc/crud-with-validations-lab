@@ -1,0 +1,27 @@
+All Songs
+<br>
+# <% @songs.each do |song|%>
+#     <%= link_to song.title, song_path(song) %>
+# <% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Song</th>
+      <th>Genre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <% @songs.each do |song|%>
+      <td><%= link_to song.title, song_path(song) %></td>
+    <% end %> 
+    </tr>
+    <tr>
+    <% @songs.each do |song|%>
+        <td><%= link_to song.genre, song_path(song) %></td>
+    <% end %> 
+    </tr>
+  </tbody>
+  </table>
+
